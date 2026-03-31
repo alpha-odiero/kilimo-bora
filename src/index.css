@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-primary: #15803d; /* Green-700 */
+  --color-primary-dark: #166534; /* Green-800 */
+  --color-primary-light: #22c55e; /* Green-500 */
+  --color-earth: #78350f; /* Amber-900 */
+  --color-earth-light: #b45309; /* Amber-700 */
+  --color-paper: #f8fafc; /* Slate-50 */
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-slate-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-slate-50 text-primary border border-primary px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg active:scale-95;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden border border-slate-100;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all;
+}
